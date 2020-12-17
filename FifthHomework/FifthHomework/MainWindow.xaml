@@ -1,0 +1,25 @@
+﻿<Window x:Class="FifthHomework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FifthHomework"
+        mc:Ignorable="d"
+        Title="Десятичный счётчик" Height="250" Width="500">
+    <Grid Width="500" Height="250">
+        <Button x:Name="Minus" Content="-" HorizontalAlignment="Left" Margin="336,135,0,0" VerticalAlignment="Top" Width="34" Background="#FFE57373" Height="62" FontSize="14" Click="Minus_Click" Visibility="Visible" IsEnabled="False"/>
+        <Button x:Name="Plus" Content="+" HorizontalAlignment="Left" Margin="150,135,0,0" VerticalAlignment="Top" Width="35" Height="62" Background="#FFD2E5AC" FontSize="14" Click="Plus_Click" Visibility="Visible" IsEnabled="False"/>
+        <TextBox x:Name="Counter" HorizontalAlignment="Left" Height="62" Margin="186,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" TextChanged="Counter_TextChanged" Visibility="Visible" IsEnabled="False" TextAlignment="Center" FontSize="36"/>
+        <Button x:Name="ManualCounter" Content="Ручной ввод" HorizontalAlignment="Left" Margin="11,50,0,0" VerticalAlignment="Top" Width="120" Height="62" Click="ManualCounter_Click" FontSize="16"/>
+        <Button x:Name="Result" Content="Завершить &#xD;&#xA;подсчёт и &#xD;&#xA;показать &#xD;&#xA;результат" Margin="389,50,0,0" Width="100" Height="147" Click="Result_Click" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="InfText" HorizontalAlignment="Left" Height="35" Margin="11,10,0,0" TextWrapping="Wrap" Text="Выберете: либо работаете со счётчиков вручную, либо все произойдёт автоматически, а затем посмотрите результат подсчета" VerticalAlignment="Top" Width="478" IsReadOnly="True" TextAlignment="Center"/>
+        <TextBox x:Name="MaxNum" HorizontalAlignment="Left" Height="32" Margin="145,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Text="Максимум диапазона:" TextChanged="MaxNum_TextChanged" IsReadOnly="True"/>
+        <TextBox x:Name="MinNum" HorizontalAlignment="Left" Height="32" Margin="145,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Text="Минимум в диапазоне:" IsReadOnly="True"/>
+        <Button x:Name="AutoInfill" Content="Автозаполнение" HorizontalAlignment="Left" Margin="11,130,0,0" VerticalAlignment="Top" Width="120" Height="67" FontSize="14" Click="AutoInfill_Click"/>
+        <TextBox x:Name="tb_maxDia" HorizontalAlignment="Left" Height="32" Margin="280,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" FontSize="16"/>
+        <TextBox x:Name="tb_minDia" HorizontalAlignment="Left" Height="32" Margin="280,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" FontSize="16"/>
+        <TextBox x:Name="PlusPush" HorizontalAlignment="Left" Height="23" Margin="250,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0" TextChanged="PlusPush_TextChanged" IsEnabled="False" IsReadOnly="True" Visibility="Hidden"/>
+        <TextBox x:Name="MinusPush" HorizontalAlignment="Left" Height="23" Margin="370,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0" TextChanged="MinusPush_TextChanged" IsEnabled="False" IsReadOnly="True" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
